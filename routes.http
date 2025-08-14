@@ -1,0 +1,24 @@
+POST http://127.0.0.1:8000/books
+Content-Type: application/json
+
+{
+  "name": "New Book"
+}
+###
+
+GET http://127.0.0.1:8000/books
+
+###
+
+PUT http://127.0.0.1:8000/books/3306b65c-ffc8-421a-b6e9-1efb22ad5f14
+Content-Type: application/json
+
+{
+  "name": "Old Book"
+}
+
+
+###
+
+DELETE http://127.0.0.1:8000/books/<uuid>
+
