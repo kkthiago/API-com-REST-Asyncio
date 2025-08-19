@@ -1,0 +1,68 @@
+{
+  "info": {
+    "name": "FastAPI Items API",
+    "_postman_id": "b6cfc892-0f0e-4a8f-a25f-9bdf876e1e21",
+    "description": "Coleção de testes para a API de Items feita em FastAPI",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Boas-vindas (GET /)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "{{baseUrl}}/"
+      }
+    },
+    {
+      "name": "Criar item (POST /items)",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Pokebola\"\n}"
+        },
+        "url": "{{baseUrl}}/items"
+      }
+    },
+    {
+      "name": "Listar itens (GET /items)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "{{baseUrl}}/items"
+      }
+    },
+    {
+      "name": "Atualizar item (PUT /items/{id})",
+      "request": {
+        "method": "PUT",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"id\": \"{{itemId}}\",\n  \"name\": \"Super Pokebola\"\n}"
+        },
+        "url": "{{baseUrl}}/items/{{itemId}}"
+      }
+    },
+    {
+      "name": "Deletar item (DELETE /items/{id})",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": "{{baseUrl}}/items/{{itemId}}"
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://127.0.0.1:8000"
+    },
+    {
+      "key": "itemId",
+      "value": "COLOQUE_UM_UUID_AQUI"
+    }
+  ]
+}

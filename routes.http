@@ -1,24 +1,27 @@
-POST http://127.0.0.1:8000/books
+### Criar item
+POST http://127.0.0.1:8000/items
 Content-Type: application/json
 
 {
-  "name": "New Book"
+  "name": "Livro de Terror"
 }
-###
-
-GET http://127.0.0.1:8000/books
 
 ###
 
-PUT http://127.0.0.1:8000/books/3306b65c-ffc8-421a-b6e9-1efb22ad5f14
+### Listar todos os itens
+GET http://127.0.0.1:8000/items
+
+###
+
+### Atualizar item (substitua pelo UUID retornado no POST)
+PUT http://127.0.0.1:8000/items/b4a59aaa-77df-48d2-994c-8c5b18a9b321
 Content-Type: application/json
 
 {
-  "name": "Old Book"
+  "name": "Livro de Receitas Atualizado"
 }
-
 
 ###
 
-DELETE http://127.0.0.1:8000/books/<uuid>
-
+### Deletar item (substitua pelo UUID retornado no POST)
+DELETE http://127.0.0.1:8000/items/b4a59aaa-77df-48d2-994c-8c5b18a9b321
